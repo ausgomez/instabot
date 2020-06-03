@@ -47,8 +47,3 @@ py upload_photo.py
 Any question please feel free to send me an email: aus.gomez95@gmail.com
 
 Enjoy!
-
-#####email: austrebertog@gmail.com
-#####Twitter: [@Anstroy95](https://twitter.com/Anstroy95)
-
-#Thanks for your support

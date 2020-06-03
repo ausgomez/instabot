@@ -7,7 +7,7 @@ import autoit
 mobile_emulation = { "deviceName": "Pixel 2" }
 opts = webdriver.ChromeOptions()
 opts.add_experimental_option("mobileEmulation", mobile_emulation)
-driver = webdriver.Chrome('C:/Users/anstr/AppData/Local/Google/Chrome/Application/chromedriver.exe', options = opts)
+driver = webdriver.Chrome('Path/to/chromedriver.exe', options = opts) # change this line
 
 
 driver.get('https://instagram.com')
@@ -15,7 +15,7 @@ driver.get('https://instagram.com')
 username = 'your_insta_username'
 password = 'your_insta_password'
 
-image_path = r"\Pictures\image.jpg" # example: r"C:\images\something.png"
+image_path = r"Path\to\your\image" # example: r"C:\images\something.png"
 caption = "Enter photo caption here"
 
 error = 1

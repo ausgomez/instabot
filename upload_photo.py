@@ -29,7 +29,6 @@ while error == 1:
 
 
 print('trying login')
-
 error = 1
 while error == 1:
     try:

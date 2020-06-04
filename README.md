@@ -38,11 +38,12 @@ pip install wget
 ```
 
 5. Install the chrome driver, follow instructions using this [link](https://sites.google.com/a/chromium.org/chromedriver/getting-started)
+   Note: this project already contains the latests version of Chrome Driver for windows, if you have your Chrome updated, do not worry about this step
 
 # Setup (in code)
 
 1. Type your path to your chromedriver.exe inside code.
-2. Go to the main function on the bottom and uncomment your desired functions to use them.
+2. Go to the main function on the main.py file uncomment your desired functions to use them.
 
 # Run
 
@@ -50,7 +51,7 @@ Run the main python file using your command line
 Example:
 
 ```bash
-py instagram_bot.py
+py main.py
 ```
 
 # That's it!

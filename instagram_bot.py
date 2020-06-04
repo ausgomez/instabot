@@ -6,14 +6,14 @@ import autoit
 
 
 print('🔵 🔵 Welcome to 📷 Instagram Bot by Anstroy 🤖 🔵 🔵')
-print('🔵         Made only for reseach purposes            🔵 \n')
+print('🔵         Made only for research purposes           🔵 \n')
 
 print('🌐 Starting Chrome driver 🌐')
 mobile_emulation = {"deviceName": "Pixel 2"}
 opts = webdriver.ChromeOptions()
 opts.add_experimental_option("mobileEmulation", mobile_emulation)
 driver = webdriver.Chrome(
-    'Path/to/chromedriver.ex', options=opts)  # change this line
+    'chromedriver.exe', options=opts)  # change this line
 
 
 def login(username, password):
@@ -47,10 +47,12 @@ def login(username, password):
             error = 0
         except:
             error = 1
+    sleep(3)
     dismissPopup()
 
 
 def downloadPhotosByHashtag(hashtag, limit):
+    dismissPopup()
     print('#️⃣ #️⃣ #️⃣ Opening Hashtag page #️⃣ #️⃣ #️⃣')
     driver.get('https://www.instagram.com/explore/tags/' + hashtag)
     sleep(2)
@@ -60,7 +62,7 @@ def downloadPhotosByHashtag(hashtag, limit):
     x = 1
     y = 1
 
-    print('📷 📷 Downloading ' + limit + ' from list 📷 📷')
+    print('📷 📷 Downloading ' + str(limit) + ' from list 📷 📷')
     image = None
 
     # scroll down
@@ -79,9 +81,9 @@ def downloadPhotosByHashtag(hashtag, limit):
 
         image_url = image.get_attribute("src")
 
-        print('🔨 Saving image #' + str(count) + ' on 📁 /images')
+        print('🔨 Saving image #' + str(count) + ' on 📁 /downloaded_images')
         local_image_filename = wget.download(
-            image_url, out='images\image' + str(count) + '.jpg')
+            image_url, out='downloaded_images\image' + str(count) + '.jpg')
 
         # It will go through each row and get each image to be downloaded
         if y >= 3:
@@ -154,6 +156,8 @@ def dismissPopup():
     except:
         print('no pop-up to dismiss...')
 
+    sleep(2)
+
     try:
         print('❌ Dismissing notifications pop-up')
         driver.find_element_by_xpath(
@@ -167,18 +171,3 @@ def goToMainPage():
     print('🏠 Going to instagram.com')
     driver.get('https://instagram.com')
     sleep(2)
-
-
-# 👇 👇 👇 YOUR ACTIONS START HERE 👇 👇 👇
-def main():
-    # call the login function passing username and password as parameters
-    # you must call this one first
-    login('your_insta_username', 'your_insta_password$')
-
-    # UNCOMMENT ANY FUNCTION THAT YOU WOULD LIKE TO USE
-    # downloadPhotosByHashtag('starwars', 5)
-    # uploadLocalPhotoWithCaption(r"Path\to\your\image", 'Enter photo caption here 😀 #somehastag')
-
-
-if __name__ == "__main__":
-    main()

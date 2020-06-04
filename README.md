@@ -5,6 +5,12 @@ Made for research purposes only
 
 Selenium instragram bot
 
+# What it does?
+
+- Uploads any local photo from your PC into your account
+- Downloads a desired amount of photos from any #hashtag
+- I am adding more things to it
+
 # Requirements
 
 1. PC with Chrome installed

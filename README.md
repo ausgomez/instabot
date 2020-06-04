@@ -3,7 +3,7 @@
 Instragram Bot
 Made for research purposes only
 
-Selenium instragram bot
+Selenium instragram bot 🤖
 
 # What it does?
 
@@ -13,8 +13,8 @@ Selenium instragram bot
 
 # Requirements
 
-1. PC with Chrome installed
-2. An instagram account (ofc :D)
+1. PC with [Google Chrome](https://www.google.com/chrome/) installed
+2. An instagram account (obviously)
 
 # Installation
 

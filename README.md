@@ -11,6 +11,10 @@ Selenium instragram bot 🤖
 - Downloads a desired amount of photos from any #hashtag
 - I am adding more things to it
 
+# DEMO VIDEO (1:29 min)
+
+[Link Here](https://share.getcloudapp.com/jkuYlzbK)
+
 # Requirements
 
 1. PC with [Google Chrome](https://www.google.com/chrome/) installed

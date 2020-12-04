@@ -37,11 +37,11 @@ def login(username, password):
         try:
             print('Inputting information')
             driver.find_element_by_xpath(
-                '//*[@id="react-root"]/section/main/article/div/div/div/form/div[4]/div/label/input').send_keys(username)
+                '//*[@id="loginForm"]/div[1]/div[3]/div/label/input').send_keys(username)
             driver.find_element_by_xpath(
-                '//*[@id="react-root"]/section/main/article/div/div/div/form/div[5]/div/label/input').send_keys(password)
+                '//*[@id="loginForm"]/div[1]/div[4]/div/label/input').send_keys(password)
             driver.find_element_by_xpath(
-                '//*[@id="react-root"]/section/main/article/div/div/div/form/div[7]/button').click()
+                '//*[@id="loginForm"]/div[1]/div[6]/button').click()
 
             print('Clicking Login button')
             error = 0
